@@ -14,5 +14,5 @@ Movier, 영화에 대한 개인 기록과 공유.
 
 
 ---
-<button type="button" onclick="location.href="#">링크</button>
+
 [진행중인 프로젝트 링크](http://127.0.0.1:5500/Login.html)
