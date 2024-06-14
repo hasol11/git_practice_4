@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Tracker</title>
+  <!-- 부트스트랩 CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .card {
+      width: 300px; /* 카드의 너비 */
+      margin: 10px; /* 카드 간의 간격 */
+    }
+
+    .card img {
+      max-width: 100%; /* 이미지가 카드에 맞춰 크기 조정 */
+    }
+
+    .card-body {
+      display: flex;
+      align-items: center; /* 세로 가운데 정렬 */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mt-5 mb-4">Movie Tracker</h1>
+  <h5 class="mb-4">영화에 대한 나의 감상 기록장</h5>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="토토로2.jpg" class="card-img-top" alt="토토로">
+        <div class="card-body">
+          <h6 class="card-title">토토로</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="하울의.png" class="card-img-top" alt="하울의 움직이는 성">
+        <div class="card-body">
+          <h6 class="card-title">하울의 움직이는 성</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="포뇨.jpg" class="card-img-top" alt="포뇨">
+        <div class="card-body">
+          <h6 class="card-title">포뇨</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 부트스트랩 JS 및 종속성 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
