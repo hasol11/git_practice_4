@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movier</title>
+  <!-- 부트스트랩 CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Reset 기본 스타일 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding-top: 20px;
+    }
+
+    .banner {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 300px; /* 배너의 높이 */
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease; /* 슬라이드 전환 애니메이션 설정 */
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover; /* 이미지가 배너에 꽉 차도록 설정 */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h1>Movier</h1>
+    </div>
+    <div class="col">
+      <nav class="nav justify-content-end">
+        <a class="nav-link" href="#">ILOVEMOVIES</a>
+        <a class="nav-link" href="#">로그아웃</a>
+        <a class="nav-link" href="#">My Page</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="banner mt-4">
+    <div class="slides">
+      <img src="Movie1.png" alt="Image 1">
+      <img src="Movie2.png" alt="Image 2">
+    </div>
+  </div>
+</div>
+
+<!-- 부트스트랩 JS 및 종속성 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+// 이미지 슬라이드 쇼 자동 재생 설정
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slides img');
+const totalSlides = slides.length;
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlide();
+}
+
+function updateSlide() {
+  const slideWidth = slides[0].clientWidth;
+  document.querySelector('.slides').style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+}
+
+setInterval(nextSlide, 3000); // 3초마다 다음 슬라이드로 넘어감
+</script>
+
+</body>
+</html>
