@@ -36,6 +36,35 @@
       width: 100%;
       object-fit: cover; /* 이미지가 배너에 꽉 차도록 설정 */
     }
+
+    .card {
+      width: 300px; /* 카드의 너비 */
+      margin: 10px; /* 카드 간의 간격 */
+    }
+
+    .card img {
+      max-width: 100%; /* 이미지가 카드에 맞춰 크기 조정 */
+      height: 400px;
+    }
+
+    .card-body {
+      display: flex;
+      align-items: center; /* 세로 가운데 정렬 */
+    }
+
+    /* 추가된 스타일 */
+    .community {
+      height: 200px; /* div의 높이 */
+      padding: 20px; /* 내부 여백 */
+      margin-top: 20px; /* 위 여백 */
+      margin-bottom: 20px; /* 아래 여백 */
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -48,7 +77,7 @@
     <div class="col">
       <nav class="nav justify-content-end">
         <a class="nav-link" href="#">ILOVEMOVIES</a>
-        <a class="nav-link" href="#">로그아웃</a>
+        <a class="nav-link" href="Login.html">로그아웃</a>
         <a class="nav-link" href="#">My Page</a>
       </nav>
     </div>
@@ -60,7 +89,58 @@
       <img src="Movie2.png" alt="Image 2">
     </div>
   </div>
+
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="토토로2.jpg" class="card-img-top" alt="토토로">
+        <div class="card-body">
+          <h6 class="card-title">토토로</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="하울의.png" class="card-img-top" alt="하울의 움직이는 성">
+        <div class="card-body">
+          <h6 class="card-title">하울의 움직이는 성</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="포뇨.jpg" class="card-img-top" alt="포뇨">
+        <div class="card-body">
+          <h6 class="card-title">포뇨</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- more 버튼 -->
+  <div class="text-right">
+    <button type="button" class="btn btn-primary mt-3" onclick="location.href='MovieList.html'">more</button>
+  </div>
+
+
+  <!-- 하단 줄 추가 -->
+  <hr>
+
 </div>
+
+<!-- 창 크기에 따라 크기가 달라지는 div 추가 -->
+<div class="bg-dark text-white">
+  <div class="container community">
+    <h2 class="text-center">커뮤니티 바로가기</h2>
+  </div>
+</div>
+<footer class="text-center">
+  <div class="container">
+    <p>Contact us: <a href="mailto:support@movier.com" class="text-white">support@movier.com</a></p>
+  </div>
+</footer>
 
 <!-- 부트스트랩 JS 및 종속성 -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
