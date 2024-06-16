@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 목록</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .movie-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .movie-1 {
+            background-color: #f8d7da;
+        }
+        .movie-2 {
+            background-color: #d4edda;
+        }
+        .movie-3 {
+            background-color: #d1ecf1;
+        }
+        .new-post {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer; /* 포인터 형태의 커서 설정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Movie Tracker</h1>
+            <a href="Main.html" class="btn btn-secondary">뒤로가기</a>
+        </div>
+        <div class="movie-item movie-1 row align-items-center">
+            <div class="col-auto">
+                <img src="프로필1.jpg" alt="Profile Image" class="profile-img">
+            </div>
+            <div class="col">
+                <h4>메이즈러너</h4>
+                <p>너무 재밌어요.</p>
+            </div>
+        </div>
+        <div class="movie-item movie-2 row align-items-center">
+            <div class="col-auto">
+                <img src="프로필2.jpg" alt="Profile Image" class="profile-img">
+            </div>
+            <div class="col">
+                <h4>스즈메의 문단속</h4>
+                <p>진짜 여운 있는 영화.</p>
+            </div>
+        </div>
+        <div class="movie-item movie-3 row align-items-center">
+            <div class="col-auto">
+                <img src="프로필3.jpg" alt="Profile Image" class="profile-img">
+            </div>
+            <div class="col">
+                <h4>해리포터</h4>
+                <p>어렸을 때 봐서 다시 한 번 보고 싶은 영화.</p>
+            </div>
+        </div>
+        <div class="new-post" onclick="goToNewPostPage()">
+            <h4>새 글 작성하기</h4>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function goToNewPostPage() {
+            window.location.href = 'post.html'; // 클릭 시 이동할 페이지 URL
+        }
+    </script>
+</body>
+</html>

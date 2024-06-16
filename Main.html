@@ -56,8 +56,18 @@
     .community {
       height: 200px; /* div의 높이 */
       padding: 20px; /* 내부 여백 */
+      cursor: pointer; /* 커서를 포인터로 변경 */
+      border-radius: 15px; /* 둥근 모서리 설정 */
       margin-top: 20px; /* 위 여백 */
       margin-bottom: 20px; /* 아래 여백 */
+      position: relative; /* 부모 요소를 상대적으로 설정 */
+    }
+
+    .community h2 {
+      position: absolute; /* 자식 요소를 절대적으로 설정 */
+      bottom: 10px; /* 아래에서 10px 떨어진 위치 */
+      right: 10px; /* 오른쪽에서 10px 떨어진 위치 */
+      margin: 0; /* 기본 마진 제거 */
     }
 
     footer {
@@ -124,18 +134,20 @@
     <button type="button" class="btn btn-primary mt-3" onclick="location.href='MovieList.html'">more</button>
   </div>
 
-
   <!-- 하단 줄 추가 -->
   <hr>
 
 </div>
 
 <!-- 창 크기에 따라 크기가 달라지는 div 추가 -->
-<div class="bg-dark text-white">
-  <div class="container community">
-    <h2 class="text-center">커뮤니티 바로가기</h2>
+<div class="container">
+  <div class="bg-dark text-white community" onclick="location.href='board.html'">
+    <div class="container">
+      <h2 class="text-center">커뮤니티 바로가기</h2>
+    </div>
   </div>
 </div>
+
 <footer class="text-center">
   <div class="container">
     <p>Contact us: <a href="mailto:support@movier.com" class="text-white">support@movier.com</a></p>
