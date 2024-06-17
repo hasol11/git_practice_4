@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #b0c4de; /* 페이지 전체 배경색 */
+        }
+        .container {
+            background-color: #4a69bd; /* 파란색 배경 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .header, .footer {
+            background-color: #6a89cc; /* 연한 파란색 배경 */
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .header a {
+            color: black; /* 뒤로가기 링크 색상 */
+            font-weight: bold;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            background-color: #6a89cc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+        .profile-info {
+            background-color: #6a89cc;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .profile-info div {
+            margin-bottom: 10px;
+        }
+        .nav-link {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .nav-item {
+            flex: 1;
+        }
+        .footer {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center header">
+            <h1>My Page</h1>
+            <a href="Main.html" class="btn btn-link">뒤로가기</a>
+        </div>
+        <div class="profile-section">
+            <img src="내 캐릭터.jpg" alt="Profile Image" class="profile-img">
+            <div class="profile-info">
+                <div><strong>아이디:</strong> ILOVEMOVIES</div>
+                <div><strong>가입일자:</strong> 2024.05.24</div>
+                <div><strong>관심분야:</strong> 판타지 액션</div>
+                <div id="welcomeMessage"><strong>환영 메시지:</strong></div>
+            </div>
+        </div>
+        <div class="footer">
+            
+            <div class="nav-item">
+                <a href="mypage1.html" class="nav-link">내 정보</a>
+            </div>
+            <div class="nav-item">
+              <a href="mypage2.html" class="nav-link">내활동보기</a>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function checkVisitor() {
+            const username = "ILOVEMOVIES";
+            let count = getCookie("count");
+            let welcomeMessage = document.getElementById("welcomeMessage");
+
+            if (count === null) {
+                count = 1;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            setCookie("username", username, 365);
+            setCookie("count", count, 365);
+
+            welcomeMessage.innerHTML = `어서오십시오, ${username}님. ${count}번째 방문을 환영합니다!`;
+        }
+
+        document.addEventListener("DOMContentLoaded", checkVisitor);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

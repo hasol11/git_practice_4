@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #msg {
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 425px;
+            height: 350px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Current Location and Map</h3>
+    <hr>
+    <div id="msg">Loading location...</div>
+    <iframe id="map" marginheight="0" marginwidth="0"></iframe><br/>
+    <a id="bigmaplink" target="_blank">View large map</a>
+
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error, { enableHighAccuracy: true });
+
+            function success(position) {
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+                let acc = position.coords.accuracy;
+                lat = lat.toPrecision(6);
+                lon = lon.toPrecision(6);
+
+                let now = new Date();
+                let text = "Current time: " + now.toUTCString() + "<br>";
+                text += "Current position: Latitude " + lat + "°, Longitude " + lon + "°<br>";
+                text += "Accuracy: " + acc + " meters<br>";
+                document.getElementById("msg").innerHTML = text;
+
+                let map = document.getElementById("map");
+                map.src = "https://www.openstreetmap.org/export/embed.html?bbox=" + (parseFloat(lon) - 0.01) + "%2C" +
+                    (parseFloat(lat) - 0.01) + "%2C" + (parseFloat(lon) + 0.01) + "%2C" + (parseFloat(lat) + 0.01);
+
+                let maplink = document.getElementById("bigmaplink");
+                let zoom = 15;
+                maplink.href = "https://www.openstreetmap.org/#map=" + zoom + "/" + lat + "/" + lon;
+            }
+
+            function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+                document.getElementById("msg").innerHTML = "Unable to retrieve your location.";
+            }
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    </script>
+</body>
+</html>

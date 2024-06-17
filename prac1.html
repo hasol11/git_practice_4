@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,22 +54,17 @@
         }
 
         function checkVisitor() {
-            let username = getCookie("username");
+            const username = "ILOVEMOVIES";
             let count = getCookie("count");
             let welcomeMessage = document.getElementById("welcomeMessage");
 
-            if (username === null) {
-                username = prompt("이름을 입력해 주십시오.", "아무개");
-                if (username === "" || username === null) {
-                    username = "방문자";
-                }
+            if (count === null) {
                 count = 1;
-                setCookie("username", username, 365);
-                setCookie("count", count, 365);
             } else {
                 count = parseInt(count) + 1;
-                setCookie("count", count, 365);
             }
+            setCookie("username", username, 365);
+            setCookie("count", count, 365);
 
             welcomeMessage.innerHTML = `어서오십시오, ${username}님. ${count}번째 방문을 환영합니다!`;
         }
