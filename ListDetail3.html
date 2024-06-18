@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movier</title>
+  <title>Movier Tracker</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .card-img {
       max-height: 300px; 
       object-fit: cover; 
     }
+    .header {
+      background-color: #f8d7da;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .card-container {
+      background-color: #d1ecf1;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .card {
+      background-color: #fff3cd;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .card-title {
+      background-color: #d4edda;
+      padding: 10px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center">
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center header">
       <h1>Movier Tracker</h1>
       <a href="MovieList.html" class="btn btn-secondary">뒤로가기</a>
     </div>
-    <div class="mt-4">
-      <div class="card mb-3">
+    <div class="mt-4 card-container">
+      <div class="card">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="포뇨1.jpg" alt="포뇨" class="card-img img-thumbnail">
@@ -34,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="card mb-3">
+      <div class="card">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="포뇨2.jpg" alt="작품 소개" class="card-img img-thumbnail">
@@ -47,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="card mb-3">
+      <div class="card">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="포뇨3.jpg" alt="느낀점" class="card-img img-thumbnail">

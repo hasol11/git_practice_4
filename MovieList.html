@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movier</title>
+  <title>Movier Tracker</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .card img {
@@ -17,22 +17,58 @@
       margin-top: auto;
       margin-bottom: auto;
     }
+    .header {
+      background-color: #f8d7da;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .card-container {
+      background-color: #d1ecf1;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .card {
+      background-color: #fff3cd;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .card-title {
+      background-color: #d4edda;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .btn-custom {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      line-height: 0;
+    }
+    .btn-custom:hover {
+      background-color: #5a6268;
+    }
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center">
-      <h1>Movie Tracker</h1>
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center header">
+      <h1>Movier Tracker</h1>
       <a href="#" class="btn btn-secondary" onclick="location.href='Main.html'">뒤로가기</a>
     </div>
-    <div class="mt-4">
+    <div class="mt-4 card-container">
       <div class="card mb-3">
         <div class="card-body">
-          <img src="토토로2.jpg" alt="이웃집 토토로">
+          <img src="토토로2.jpg" alt="이웃집 토토로" class="img-thumbnail">
           <div class="flex-grow-1">
             <div class="d-flex justify-content-between">
               <h4 class="card-title">이웃집 토토로</h4>
-              <button class="btn btn-primary btn-sm" onclick="location.href='ListDetail1.html'">+</button>
+              <button class="btn btn-custom" onclick="location.href='ListDetail1.html'">+</button>
             </div>
             <p class="card-text">"이웃집 토토로"는 가볍고 따뜻한 분위가 조화를 이루며, 감성적인 여운을 남기는 대표적인 애니메이션</p>
           </div>
@@ -40,12 +76,11 @@
       </div>
       <div class="card mb-3">
         <div class="card-body">
-          <img src="하울의.png" alt="하울의 움직이는 성">
+          <img src="하울의.png" alt="하울의 움직이는 성" class="img-thumbnail">
           <div class="flex-grow-1">
             <div class="d-flex justify-content-between">
               <h4 class="card-title">하울의 움직이는 성</h4>
-              <button type="button" class="btn btn-primary btn-sm" onclick="location.href='ListDetail2.html'">+</button>
-
+              <button type="button" class="btn btn-custom" onclick="location.href='ListDetail2.html'">+</button>
             </div>
             <p class="card-text">이 작품은 동화적인 요소와 인간적인 이야기가 조화를 이루며, 감성적인 여운을 남기는 대표적인 애니메이션</p>
           </div>
@@ -53,11 +88,11 @@
       </div>
       <div class="card mb-3">
         <div class="card-body">
-          <img src="포뇨.jpg" alt="포뇨">
+          <img src="포뇨.jpg" alt="포뇨" class="img-thumbnail">
           <div class="flex-grow-1">
             <div class="d-flex justify-content-between">
               <h4 class="card-title">포뇨</h4>
-              <button class="btn btn-primary btn-sm" onclick="location.href='ListDetail3.html'">+</button>
+              <button class="btn btn-custom" onclick="location.href='ListDetail3.html'">+</button>
             </div>
             <p class="card-text">바다 생활이 따분해 가출한 호기심 많은 인면어 포뇨가 유리병에 갇히게 되면서 시작된다.</p>
           </div>

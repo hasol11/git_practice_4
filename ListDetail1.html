@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +8,38 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
  
   <style>
-
+    .header {
+      background-color: #f8d7da;
+      padding: 20px;
+      border-radius: 5px;
+    }
     .aside-container {
       display: flex;
       flex-direction: row;
+      background-color: #d1ecf1;
+      padding: 20px;
+      border-radius: 5px;
     }
     .aside {
       flex: 1;
-     
       width: 30%;
-      height: auto; 
+      height: auto;
+      background-color: #d4edda;
+      padding: 10px;
+      border-radius: 5px;
     }
     .content {
       flex: 2;
-      padding-left: 20px; 
+      padding-left: 20px;
+      background-color: #fff3cd;
+      padding: 10px;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
   <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center header">
       <h1>Movier Tracker</h1>
       <a href="MovieList.html" class="btn btn-secondary">뒤로가기</a>
     </div>
@@ -39,25 +51,19 @@
       </div>
       
       <div class="content">
-      
         <div class="mb-4">
           <h2>이웃집 토토로</h2>
-          <p>지브리/미야자키하야오/2001,07,28</p>
+          <p>지브리 / 미야자키 하야오 / 2001.07.28</p>
         </div>
         
         <div>
-          <p>"이웃집 토토로"는 가볍고 따뜻한 분위기와 함께 자연과 인간
-            의 조화를 아름답게 표현한 작품이다.</p>
-          <p>＂이웃집 토토로＂를 보면서 어린 시절의 순수함과 상상력을
-            다시 느낄 수 있었다. 토토로와의 모험은 현실을 잠시 잊게 해
-            주었고, 자연과 가족의 소중함을 되새기게 했다. 이 영화는 저
-            에게 따뜻한 힐링을 선사해줬디.</p>
+          <p>"이웃집 토토로"는 가볍고 따뜻한 분위기와 함께 자연과 인간의 조화를 아름답게 표현한 작품이다.</p>
+          <p>"이웃집 토토로"를 보면서 어린 시절의 순수함과 상상력을 다시 느낄 수 있었다. 토토로와의 모험은 현실을 잠시 잊게 해주었고, 자연과 가족의 소중함을 되새기게 했다. 이 영화는 저에게 따뜻한 힐링을 선사해줬다.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS and dependencies (only needed for certain components) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
