@@ -8,13 +8,12 @@
   <style>
     body {
       background-color: #b0c4de;
-  }
+    }
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     .container {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
@@ -23,30 +22,24 @@
       background-color: #fff;
       padding: 30px;
       border-radius: 8px;
-    
     }
-
     .form-group {
       margin-bottom: 20px;
     }
-
     .form-control {
       width: 100%;
       height: 40px;
       font-size: 16px;
     }
-
     .btn-submit {
       width: 100%;
       height: 40px;
       font-size: 18px;
     }
-
     #formform {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
       background-color:#fff3cd;
     }
-
   </style>
 </head>
 <body>
@@ -55,29 +48,36 @@
         <h1>Movier Memo</h1>
         <a href="board.html" class="btn btn-secondary">뒤로가기</a>
     </div>
-<div class="container mt-5" id="formform">
-
-  <form id="postForm">
-    <div class="form-group">
-      <label for="movieTitle">영화 제목</label>
-      <input type="text" class="form-control" id="movieTitle" placeholder="영화 제목을 입력하세요" required>
+    <div class="container mt-5" id="formform">
+      <form id="postForm">
+        <div class="form-group">
+          <label for="movieTitle">영화 제목</label>
+          <input type="text" class="form-control" id="movieTitle" placeholder="영화 제목을 입력하세요" required>
+        </div>
+        <div class="form-group">
+          <label for="postContent">글 내용</label>
+          <textarea class="form-control" id="postContent" rows="6" placeholder="글 내용을 입력하세요" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">완료</button>
+      </form>
     </div>
+  </div>
 
-    <div class="form-group">
-      <label for="postContent">글 내용</label>
-      <textarea class="form-control" id="postContent" rows="6" placeholder="글 내용을 입력하세요" required></textarea>
-    </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('postForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      var movieTitle = document.getElementById('movieTitle').value;
+      var postContent = document.getElementById('postContent').value;
 
-    <button type="submit" class="btn btn-primary btn-submit" onclick="location.href='boardnext.html'">완료</button>
-  </form>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
+      if (movieTitle && postContent) {
+        window.location.href = 'boardnext.html';
+      } else {
+        alert('모든 필드를 작성해 주세요.');
+      }
+    });
+  </script>
 </body>
 </html>
